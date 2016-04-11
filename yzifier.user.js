@@ -35,18 +35,11 @@ $( document ).ready(function() {
   
   console.log(fullName + ' started');
   $( '.main-menu li.ico-mat' ).after('<li class="small addon toggle">' +
-    fullName +
+    GM_info.script.name +
     '<span class="addon-status">Loading...</span>' +
   '</li>');
   
   window.setTimeout(function() {
-    /*
-    $('script[type="math/tex"]').each(function (i, obj) {
-      var tex = $(this).text();
-      var plain = parseTeX(tex);
-      $(this).after('<span style="background-color: green; padding: 5px;" class="addon-tex no-mathjax">' + plain + "</span>");
-    });
-    */
     
     MathJax.Hub.Queue(typeset);
 
@@ -61,7 +54,7 @@ $( document ).ready(function() {
         var text = '&spades;';
         var title = 'Result';
         var target = 'wolframalpha';
-        var url = 'https://www.wolframalpha.com/input/?i=' + encodeURIComponent(e.originalText);
+        var url = 'https://www.wolframalpha.com/input/?i=' + encodeURIComponent(parseTeX(e.originalText));
         var html =
           '<span class="'+cls+'">'+
           '<a href="'+url +'" target="'+target+'" title="'+title+'">'+text+
@@ -87,15 +80,16 @@ function parseTeX(tex) {
   tex = tex.split('\\'+'\\').join(',');
   tex = tex.split('\\begin{cases}').join('');
   tex = tex.split('\\end{cases}').join('');
-  tex = tex.split(' -').join('-');
+  
+  /*tex = tex.split(' -').join('-');
   tex = tex.split(' - ').join('-');
   tex = tex.split('- ').join('-');
   tex = tex.split(' +').join('+');
   tex = tex.split(' + ').join('+');
   tex = tex.split('- ').join('+');
-  //tex = tex.split(':').join('/');
+  tex = tex.split(':').join('/');
   tex = tex.split('\\frac{').join('(');
   tex = tex.split('}{').join('/');
-  tex = tex.split('}').join(')');
+  tex = tex.split('}').join(')');*/
   return tex; 
 }
