@@ -3,7 +3,7 @@
 // @namespace   com.tada5.yzifier
 // @description Automatically solve math equations on egzaminatorius.lt
 // @downloadURL http://varanauskas.github.io/yzifier/yzifier.user.js
-// @updateURL http://varanauskas.github.io/yzifier/yzifier.user.js
+// @updateURL   http://varanauskas.github.io/yzifier/yzifier.user.js
 // @icon        http://varanauskas.github.io/yzifier/assets/icon.png
 // @include     https://egzaminatorius.lt/app/testas/*
 // @version     0.1
@@ -13,7 +13,7 @@
 $( document ).ready(function() {
   $("head").append (
     '<link '
-    + 'href="//varanauskas.github.io/yzifier/style.css" '
+    + 'href="//varanauskas.github.io/yzifier/assets/style.css" '
     + 'rel="stylesheet" type="text/css">'
   );
   $("body").append(
@@ -28,7 +28,7 @@ $( document ).ready(function() {
   
   var fullName = GM_info.script.name + " v" + GM_info.script.version;
   
-  console.log(fullName);
+  console.log(fullName + ' started');
   $( '.main-menu li.ico-mat' ).after('<li class="small addon">' +
     fullName +
     '<span class="addon-status">Loading...</span>' +
@@ -36,7 +36,9 @@ $( document ).ready(function() {
   
   window.setTimeout(function() {
     $('script[type="math/tex"]').each(function (i, obj) {
-      $(this).after('<span class="addon-tex no-mathjax">' + i + " | " + $(this).html() + "</span>");
+      var tex = $(this).text();
+      var plain = parseTeX(tex);
+      $(this).after('<span class="addon-tex no-mathjax">' + i + " | " + plain + "</span>");
     });
     updateStatus("Ready");
   }, 500);
@@ -46,9 +48,19 @@ $( document ).ready(function() {
 });
 
 function updateStatus(status) {
-  $('.addon-status').html(status);
+  $('.addon-status').text(status);
 }
 
-function parseTeX(text) {
-  //if (text.includes())
+function parseTeX(tex) {
+  tex = tex.replace(' \\'+'\\', ',');
+  tex = tex.replace('\\begin{cases}', '');
+  tex = tex.replace('\\end{cases}', '');
+  tex = tex.replace(' -', '-');
+  tex = tex.replace(' - ', '-');
+  tex = tex.replace('- ', '-');
+  tex = tex.replace(' +', '+');
+  tex = tex.replace(' + ', '+');
+  tex = tex.replace('- ', '+');
+  return tex;
+  
 }
