@@ -1,11 +1,11 @@
-.main-menu .addon .header {
+.main-menu .addon {
   font-size: 16px;
   padding-right: 45px;
   line-height: 48px;
   position: relative;
   color: #fff;
 }
-.main-menu .addon .header span {
+.main-menu .addon span {
   width: auto;
   padding: 0 10px;
 }

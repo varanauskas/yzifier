@@ -34,11 +34,9 @@ $( document ).ready(function() {
 
   
   console.log(fullName + ' started');
-  $( '.main-menu li.ico-mat' ).after('<li class="addon">' +
-    '<div class="header">' +
-      fullName +
-      '<span class="addon-status">Loading...</span>' +
-    '</div>' +
+  $( '.main-menu li.ico-mat' ).after('<li class="small addon">' +
+    fullName +
+    '<span class="addon-status">Loading...</span>' +
   '</li>');
   
   window.setTimeout(function() {
