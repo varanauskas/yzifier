@@ -1,2 +1,2 @@
-# yzifier
-Automatic math equation solver for egzaminatorius.lt
+# :v: yzifier
+Automatically solve math equations on [egzaminatorius.lt](https://egzaminatorius.lt/)
