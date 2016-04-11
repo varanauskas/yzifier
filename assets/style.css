@@ -4,6 +4,9 @@
   line-height: 48px;
   position: relative;
   color: #fff;
+  padding-left: 48px;
+  margin-left: 10px;
+  background: url('http://varanauskas.github.io/yzifier/assets/icon.png') no-repeat left;
 }
 .main-menu .addon span {
   width: auto;
