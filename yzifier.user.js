@@ -2,6 +2,9 @@
 // @name        yzifier
 // @namespace   com.tada5.yzifier
 // @description Automatically solve math equations on egzaminatorius.lt
+// @downloadURL http://varanauskas.github.io/yzifier/yzifier.user.js
+// @updateURL http://varanauskas.github.io/yzifier/yzifier.user.js
+// @icon        http://varanauskas.github.io/yzifier/assets/icon.png
 // @include     https://egzaminatorius.lt/app/testas/*
 // @version     0.1
 // @grant       none
