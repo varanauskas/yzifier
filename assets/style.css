@@ -12,3 +12,11 @@
   width: auto;
   padding: 0 10px;
 }
+
+a.addon.yzify {
+    color: darkorange;
+}
+a.addon.yzify img {
+    height: 1em;
+    width: auto;
+}

@@ -21,7 +21,7 @@ https://github.com/varanauskas/yzifier/raw/master/yzifier.user.js
 ## Usage
 - Open your math test on [egzaminatorius.lt](https://egzaminatorius.lt/) and wait for the script to load
 - Wait for the script to load and enumerate all equations (You can see if it's ready in the menu of [egzaminatorius.lt](https://egzaminatorius.lt/)
-- Click the ♠ next to any equation to load the [WolframAlpha](https://www.wolframalpha.com/) calculation
+- Click the :v: next to any equation to load the [WolframAlpha](https://www.wolframalpha.com/) calculation
 
 ---
 
