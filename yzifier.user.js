@@ -20,10 +20,10 @@ $( document ).ready(function() {
   
   logConsole('INIT');
   
-  $( '.main-menu li.ico-mat' ).after('<li class="small addon toggle">' +
+  $( '.main-menu li.ico-mat' ).after('<li class="small addon toggle"><a href="https://github.com/varanauskas/yzifier/" title="' + GM_info.script.name + ' v(' + GM_info.script.version + ')' + '">' +
     GM_info.script.name +
     '<span class="addon-status">Loading...</span>' +
-  '</li>');
+  '</a></li>');
   
   // Adding WolframAlpha links
   MathJax.Hub.Queue(typeset);
