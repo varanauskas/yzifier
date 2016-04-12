@@ -20,7 +20,7 @@ $( document ).ready(function() {
   
   logConsole('INIT');
   
-  $( '.main-menu li.ico-mat' ).after('<li class="small addon"><a href="https://github.com/varanauskas/yzifier/" title="' + GM_info.script.name + ' v(' + GM_info.script.version + ')' + '">' +
+  $( '.main-menu li.ico-mat' ).after('<li class="small addon"><a target="_blank" href="https://github.com/varanauskas/yzifier/" title="' + GM_info.script.name + ' v(' + GM_info.script.version + ')' + '">' +
     GM_info.script.name +
     '<span class="addon-status">Loading...</span>' +
   '</a></li>');
