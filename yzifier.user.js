@@ -81,15 +81,16 @@ function parseTeX(tex) {
   tex = tex.split('\\begin{cases}').join('');
   tex = tex.split('\\end{cases}').join('');
   
-  /*tex = tex.split(' -').join('-');
+  tex = tex.split(' -').join('-');
   tex = tex.split(' - ').join('-');
   tex = tex.split('- ').join('-');
   tex = tex.split(' +').join('+');
   tex = tex.split(' + ').join('+');
   tex = tex.split('- ').join('+');
-  tex = tex.split(':').join('/');
+  //tex = tex.split(':').join('/');
   tex = tex.split('\\frac{').join('(');
-  tex = tex.split('}{').join('/');
-  tex = tex.split('}').join(')');*/
+  tex = tex.split('}{').join(')/(');
+  tex = tex.split('}').join(')');
+  tex = tex.split('~').join('');
   return tex; 
 }
