@@ -23,6 +23,11 @@ https://github.com/varanauskas/yzifier/raw/master/yzifier.user.js
 - Wait for the script to load and enumerate all equations (You can see if it's ready in the menu of [egzaminatorius.lt](https://egzaminatorius.lt/)
 - Click the :v: next to any equation to load the [WolframAlpha](https://www.wolframalpha.com/) calculation
 
+## Planned Features for v(2.0 Rapid Razmuk)
+- Multiple equation grouping into one system
+- (Possibly) Solving equations myself
+- Bugfixes
+
 ---
 
 ## License

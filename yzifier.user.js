@@ -6,7 +6,7 @@
 // @updateURL   http://varanauskas.github.io/yzifier/yzifier.user.js
 // @icon        http://varanauskas.github.io/yzifier/assets/icon.png
 // @include     https://egzaminatorius.lt/app/testas/*
-// @version     1.1 "Ka Vilmute"
+// @version     1.1 "Wonderful Weelma"
 // @grant       none
 // ==/UserScript==
 
@@ -20,7 +20,7 @@ $( document ).ready(function() {
   
   logConsole('INIT');
   
-  $( '.main-menu li.ico-mat' ).after('<li class="small addon"><a target="_blank" href="https://github.com/varanauskas/yzifier/" title="' + GM_info.script.name + ' v(' + GM_info.script.version + ')' + '">' +
+  $( '.main-menu li.ico-mat' ).after('<li class="small addon"><a target="_blank" href="https://github.com/varanauskas/yzifier/" title="' + GM_info.script.name + ' v' + GM_info.script.version + '' + '">' +
     GM_info.script.name +
     '<span class="addon-status">Loading...</span>' +
   '</a></li>');
@@ -55,7 +55,7 @@ function updateStatus(status) {
 }
 
 function logConsole(status) {
-  console.log(GM_info.script.name + ' v(' + GM_info.script.version + ') | ' + status);
+  console.log(GM_info.script.name + ' v' + GM_info.script.version + ' | ' + status);
 }
 
 function parseTeX(tex) {
